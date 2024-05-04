@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "1a56e645-d847-4d41-b652-8f395e2fe311",
+		"name": "demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15499739"
+	},
+	"item": [
+		{
+			"name": "/users/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"anna@gmail.com\",\n    \"firstName\": \"Anna\",\n    \"lastName\": \"Lee\",\n    \"birthDate\": \"2006-01-04T13:33:03.969Z\",\n    \"address\": null,\n    \"phoneNumber\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/findByBirthDateRange",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "from",
+						"value": "1651562483000",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "to",
+						"value": "1714720883000",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/users/findByBirthDateRange?from=988874483000&to=1714720883000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"findByBirthDateRange"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "988874483000"
+						},
+						{
+							"key": "to",
+							"value": "1714720883000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delete/id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "from",
+						"value": "1651562483000",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "to",
+						"value": "1714720883000",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/users/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/update/id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "from",
+						"value": "1651562483000",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "to",
+						"value": "1714720883000",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"ka@gmail.com\",\n    \"firstName\": \"Ka\",\n    \"lastName\": \"Koss\",\n    \"birthDate\": \"2005-02-04T13:33:03.969Z\",\n    \"address\": \"Lviv\",\n    \"phoneNumber\": \"+38088888889888\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/update/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/updateEmail/id",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "from",
+						"value": "1651562483000",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "to",
+						"value": "1714720883000",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"nik@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/updateEmail/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"updateEmail",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
